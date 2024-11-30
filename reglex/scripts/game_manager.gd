@@ -5,6 +5,7 @@ const FactoryType = preload("res://scripts/factory_type.gd")
 var LABS = preload("res://scenes/lab.tscn");
 var FACTORIES = preload("res://scenes/factory.tscn");
 var ShopMenu = null;
+var UpgradeMenu = null;
 
 #instantiate all metrics
 var research_points: int = 0
@@ -28,6 +29,8 @@ func add_produits_menstruels(type, amount):
 func _ready() -> void:
 	ShopMenu = get_parent().get_node("ShopMenu")
 	ShopMenu.visible = false
+	UpgradeMenu = get_parent().get_node("UpgradeDistributionMenu")
+	UpgradeMenu.visible = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -64,3 +67,7 @@ func _on_shop_button_pressed() -> void:
 	if not ShopMenu.visible:
 		selected_building = ""
 	
+
+
+func _on_upgrade_pressed() -> void:
+	UpgradeMenu.visible = !(UpgradeMenu.visible)
