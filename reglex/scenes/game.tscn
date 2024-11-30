@@ -1,15 +1,19 @@
-[gd_scene load_steps=31 format=4 uid="uid://chawj3uyw7cmp"]
+[gd_scene load_steps=35 format=4 uid="uid://chawj3uyw7cmp"]
 
 [ext_resource type="Texture2D" uid="uid://ss8ywhox6hkm" path="res://assets/sprites/forest_/forest_ [resources].png" id="2_66cox"]
 [ext_resource type="Texture2D" uid="uid://cimjskam8lux0" path="res://assets/sprites/forest_/forestPath_.png" id="2_iqf05"]
 [ext_resource type="Texture2D" uid="uid://duquu1deabqeo" path="res://assets/sprites/forest_/forest_.png" id="2_kxg1t"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="3_toqq0"]
 [ext_resource type="Texture2D" uid="uid://dk2ed5gjjjl0q" path="res://assets/sprites/tundra_/igloo_.png" id="3_xhv7p"]
 [ext_resource type="Texture2D" uid="uid://cms08lpf4qp86" path="res://assets/sprites/forest_/forest_ [fountain].png" id="4_4asgw"]
 [ext_resource type="Texture2D" uid="uid://diahx62habvr1" path="res://assets/sprites/forest_/forest_ [fencesAndWalls].png" id="5_mtd0f"]
 [ext_resource type="Texture2D" uid="uid://ctar6eydtx8nk" path="res://assets/sprites/forest_/forest_ [bridgeVertical].png" id="6_wph46"]
 [ext_resource type="Texture2D" uid="uid://krr8f3dw5vdp" path="res://assets/sprites/forest_/forest_ [bridgeHorizontal].png" id="7_lbw48"]
 [ext_resource type="Texture2D" uid="uid://drxnba2e8bfqb" path="res://assets/sprites/forest_/forest_ [bridgeAnimatedTiles].png" id="8_vxloj"]
-[ext_resource type="PackedScene" uid="uid://du481fievw0kc" path="res://scenes/fire.tscn" id="10_x8amp"]
+[ext_resource type="PackedScene" path="res://scenes/fire.tscn" id="10_x8amp"]
+[ext_resource type="PackedScene" uid="uid://di1m4r131r25p" path="res://scenes/shop_menu.tscn" id="11_10unv"]
+[ext_resource type="Script" path="res://scripts/shop_menu.gd" id="11_lki7h"]
+[ext_resource type="PackedScene" path="res://scenes/factory.tscn" id="14_4iqwu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q7o6i"]
 texture = ExtResource("2_kxg1t")
@@ -1385,7 +1389,7 @@ sources/8 = SubResource("TileSetAtlasSource_lor4a")
 [node name="Game" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
+zoom = Vector2(2, 2)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(9, 50)
@@ -1398,3 +1402,25 @@ tile_set = SubResource("TileSet_g5ukg")
 
 [node name="fire" parent="TileMapLayer/TileMapLayer2" instance=ExtResource("10_x8amp")]
 position = Vector2(264, -101)
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("3_toqq0")
+
+[node name="MenuButton" type="MenuButton" parent="."]
+offset_left = 347.0
+offset_top = 233.0
+offset_right = 416.0
+offset_bottom = 276.0
+text = "Shop"
+script = ExtResource("11_lki7h")
+
+[node name="ShopMenu" parent="." instance=ExtResource("11_10unv")]
+offset_left = 290.0
+offset_top = 217.0
+offset_right = 290.0
+offset_bottom = 217.0
+
+[node name="Factory" parent="." instance=ExtResource("14_4iqwu")]
+position = Vector2(-20, 118)
+
+[connection signal="pressed" from="MenuButton" to="GameManager" method="_on_shop_button_pressed"]
