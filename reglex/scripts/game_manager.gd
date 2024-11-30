@@ -13,6 +13,7 @@ var satisfaction: int = 0
 var stocks_menstruel = {
 	FactoryType.Type.SERVIETTE: 0,
 }
+var somme_PM = 0
 
 var selected_building: String = "";
 
@@ -23,7 +24,11 @@ func add_research_points(points: int) -> void:
 
 func add_produits_menstruels(type, amount):
 	stocks_menstruel[type] += amount
+	#match type:
+	#	FactoryType.Type.SERVIETTE:
+			
 	print(stocks_menstruel)
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

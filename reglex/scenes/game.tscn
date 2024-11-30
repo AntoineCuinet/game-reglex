@@ -11,10 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://krr8f3dw5vdp" path="res://assets/sprites/forest_/forest_ [bridgeHorizontal].png" id="7_lbw48"]
 [ext_resource type="Texture2D" uid="uid://drxnba2e8bfqb" path="res://assets/sprites/forest_/forest_ [bridgeAnimatedTiles].png" id="8_vxloj"]
 [ext_resource type="PackedScene" path="res://scenes/fire.tscn" id="10_x8amp"]
-[ext_resource type="PackedScene" uid="uid://bxqfatnk15vre" path="res://scenes/shop_menu.tscn" id="11_10unv"]
+[ext_resource type="PackedScene" uid="uid://di1m4r131r25p" path="res://scenes/shop_menu.tscn" id="11_10unv"]
 [ext_resource type="Script" path="res://scripts/shop_menu.gd" id="11_lki7h"]
 [ext_resource type="PackedScene" path="res://scenes/factory.tscn" id="14_4iqwu"]
-[ext_resource type="PackedScene" uid="uid://badde4gpaeo1l" path="res://scenes/upgrade_distribution_menu.tscn" id="21_mcmmo"]
+[ext_resource type="PackedScene" path="res://scenes/upgrade_distribution_menu.tscn" id="21_mcmmo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q7o6i"]
 texture = ExtResource("2_kxg1t")
