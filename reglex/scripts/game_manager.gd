@@ -6,6 +6,7 @@ var LABS = preload("res://scenes/lab.tscn");
 var FACTORIES = preload("res://scenes/factory.tscn");
 var ShopMenu = null;
 var UpgradeMenu = null;
+var Metrics = null;
 
 #instantiate all metrics
 var research_points: int = 0
@@ -24,10 +25,10 @@ func add_research_points(points: int) -> void:
 
 func add_produits_menstruels(type, amount):
 	stocks_menstruel[type] += amount
-	#match type:
-	#	FactoryType.Type.SERVIETTE:
-			
-	print(stocks_menstruel)
+	match type:
+		FactoryType.Type.SERVIETTE:
+			somme_PM += amount
+	Metrics.update_produits_menstruels(somme_PM)
 
 func get_cell_coord(coord: Vector2) -> Vector2i:
 	var relative_position: Vector2 = $CityArea.to_local(coord)
@@ -42,6 +43,9 @@ func _ready() -> void:
 	ShopMenu.visible = false
 	UpgradeMenu = get_parent().get_node("UpgradeDistributionMenu")
 	UpgradeMenu.visible = false
+	Metrics = get_parent().get_node("Metrics")
+	Metrics.update_produits_menstruels(0)
+	Metrics.update_research_points(0)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
