@@ -5,6 +5,7 @@ const FactoryType = preload("res://scripts/factory_type.gd")
 var LABS = preload("res://scenes/lab.tscn");
 var FACTORIES = preload("res://scenes/factory.tscn");
 var ShopMenu = null;
+var UpgradeMenu = null;
 
 #instantiate all metrics
 var research_points: int = 0
@@ -35,6 +36,8 @@ func get_cell_coord(coord: Vector2) -> Vector2i:
 func _ready() -> void:
 	ShopMenu = get_parent().get_node("ShopMenu")
 	ShopMenu.visible = false
+	UpgradeMenu = get_parent().get_node("UpgradeDistributionMenu")
+	UpgradeMenu.visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -75,3 +78,6 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		return
 	print(get_cell_coord(event.position))
 	print("========")
+
+func _on_upgrade_pressed() -> void:
+	UpgradeMenu.visible = !(UpgradeMenu.visible)

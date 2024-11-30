@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://chawj3uyw7cmp"]
+[gd_scene load_steps=36 format=4 uid="uid://chawj3uyw7cmp"]
 
 [ext_resource type="Texture2D" uid="uid://ss8ywhox6hkm" path="res://assets/sprites/forest_/forest_ [resources].png" id="2_66cox"]
 [ext_resource type="Texture2D" uid="uid://cimjskam8lux0" path="res://assets/sprites/forest_/forestPath_.png" id="2_iqf05"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://du481fievw0kc" path="res://scenes/fire.tscn" id="10_x8amp"]
 [ext_resource type="PackedScene" uid="uid://bxqfatnk15vre" path="res://scenes/shop_menu.tscn" id="11_10unv"]
 [ext_resource type="Script" path="res://scripts/shop_menu.gd" id="11_lki7h"]
+[ext_resource type="PackedScene" path="res://scenes/upgrade_distribution_menu.tscn" id="14_qijth"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q7o6i"]
 texture = ExtResource("2_kxg1t")
@@ -1426,5 +1427,7 @@ offset_left = 290.0
 offset_top = 217.0
 offset_right = 290.0
 offset_bottom = 217.0
+
+[node name="UpgradeDistributionMenu" parent="." instance=ExtResource("14_qijth")]
 
 [connection signal="input_event" from="GameManager" to="GameManager" method="_on_input_event"]

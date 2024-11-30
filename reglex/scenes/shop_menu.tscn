@@ -152,10 +152,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 3.0
-offset_top = -2.0
-offset_right = 3.0
-offset_bottom = -2.0
+offset_left = -39.0
+offset_top = 2.0
+offset_right = -39.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6spfj")
@@ -173,12 +173,12 @@ offset_right = -252.0
 offset_bottom = -153.0
 scale = Vector2(2, 2)
 
-[node name="PopupMenu_MenuBar#MenuButton1" type="MenuButton" parent="."]
+[node name="MenuButton1" type="MenuButton" parent="."]
 layout_mode = 0
-offset_left = 43.0
-offset_top = 20.0
-offset_right = 527.0
-offset_bottom = 44.0
+offset_left = -200.0
+offset_top = -123.0
+offset_right = 284.0
+offset_bottom = -92.0
 text = "Laboratoire : ??"
 
 [node name="BtnUsineServiette" type="MenuButton" parent="."]
@@ -189,4 +189,5 @@ offset_right = 281.0
 offset_bottom = -33.0
 text = "Usine de Serviette : ??"
 
+[connection signal="pressed" from="MenuButton1" to="." method="_on_menu_button_pressed" binds= ["\"Laboratoire\""]]
 [connection signal="pressed" from="BtnUsineServiette" to="." method="_on_menu_button_pressed" binds= ["\"Serviette\""]]
