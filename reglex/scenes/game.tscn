@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://chawj3uyw7cmp"]
+[gd_scene load_steps=49 format=4 uid="uid://chawj3uyw7cmp"]
 
 [ext_resource type="Texture2D" uid="uid://ss8ywhox6hkm" path="res://assets/sprites/forest_/forest_ [resources].png" id="2_66cox"]
 [ext_resource type="Texture2D" uid="uid://cimjskam8lux0" path="res://assets/sprites/forest_/forestPath_.png" id="2_iqf05"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://blfk0u7nf3fix" path="res://assets/sprites/factory_/acid_.png" id="14_nmlmd"]
 [ext_resource type="Texture2D" uid="uid://dx685igti3xgl" path="res://assets/sprites/factory_/furnace_.png" id="14_ts6p1"]
 [ext_resource type="Texture2D" uid="uid://c12cadyovmu1q" path="res://assets/sprites/buildings_/blueHouse_0_0.png" id="15_lujkd"]
+[ext_resource type="PackedScene" uid="uid://badde4gpaeo1l" path="res://scenes/upgrade_distribution_menu.tscn" id="21_mcmmo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q7o6i"]
 texture = ExtResource("2_kxg1t")
@@ -1757,4 +1758,19 @@ offset_top = 0.0
 offset_right = 0.0
 offset_bottom = 0.0
 
+[node name="Upgrade" type="MenuButton" parent="."]
+offset_left = 268.0
+offset_top = 238.0
+offset_right = 343.0
+offset_bottom = 269.0
+text = "Upgrade"
+
+[node name="UpgradeDistributionMenu" parent="." instance=ExtResource("21_mcmmo")]
+visible = false
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
 [connection signal="pressed" from="MenuButton" to="GameManager" method="_on_shop_button_pressed"]
+[connection signal="pressed" from="Upgrade" to="GameManager" method="_on_upgrade_pressed"]

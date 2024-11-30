@@ -1,0 +1,86 @@
+[gd_scene load_steps=4 format=3 uid="uid://badde4gpaeo1l"]
+
+[ext_resource type="Texture2D" uid="uid://b047fn5ql2du6" path="res://assets/sprites/GUI/24080034-fond-abstrait-degrade-noir-et-blanc-gratuit-photo.webp" id="1_wwtue"]
+[ext_resource type="Texture2D" uid="uid://btcjiaicxaus0" path="res://assets/sprites/GUI/purple_gem.png" id="2_1n21q"]
+[ext_resource type="Script" path="res://scenes/upgrade_1.gd" id="2_1yoj7"]
+
+[node name="UpgradeDistributionMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 434.0
+offset_top = 84.0
+offset_right = 434.0
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.00006, 13)
+scale = Vector2(2.22802, 2.24726)
+texture = ExtResource("1_wwtue")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -952.0
+offset_top = -332.0
+offset_right = -584.0
+offset_bottom = -332.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+script = ExtResource("2_1yoj7")
+
+[node name="Upgrade" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Upgrade"
+
+[node name="Sprite2D" type="Sprite2D" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
+position = Vector2(349, 24)
+scale = Vector2(2.15093, 2.0097)
+texture = ExtResource("2_1n21q")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="Amelioration" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Suppression de la TVA "
+vertical_alignment = 1
+
+[node name="Effet" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Effet"
+
+[node name="Info" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Info"
+
+[node name="Upgrade" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Upgrade"
+
+[node name="Sprite2D" type="Sprite2D" parent="ScrollContainer/VBoxContainer/HBoxContainer3"]
+position = Vector2(349, 24)
+scale = Vector2(2.15093, 2.0097)
+texture = ExtResource("2_1n21q")
