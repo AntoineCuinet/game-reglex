@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://duiit0iaduhtp"]
+
+[ext_resource type="Script" path="res://scripts/factory.gd" id="1_btc57"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_eysua"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jn0ob"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_dgsrg"]
+
+[node name="Factory" type="Area2D"]
+script = ExtResource("1_btc57")
+
+[node name="Building" type="Sprite2D" parent="."]
+self_modulate = Color(0.191325, 3.85046e-07, 0.958925, 1)
+scale = Vector2(21, 21)
+texture = SubResource("CanvasTexture_eysua")
+
+[node name="ProductCollider" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_jn0ob")
+disabled = true
+debug_color = Color(0.987461, 0, 0.312767, 0.42)
+
+[node name="Product" type="Sprite2D" parent="ProductCollider"]
+visible = false
+scale = Vector2(20, 20)
+texture = SubResource("CanvasTexture_dgsrg")
+
+[node name="Clock" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
