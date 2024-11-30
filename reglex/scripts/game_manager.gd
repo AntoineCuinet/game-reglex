@@ -61,4 +61,6 @@ func set_selected_building(building: String):
 
 func _on_shop_button_pressed() -> void:
 	ShopMenu.visible = !ShopMenu.visible
+	if not ShopMenu.visible:
+		selected_building = ""
 	
