@@ -85,3 +85,7 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 
 func _on_upgrade_pressed() -> void:
 	UpgradeMenu.visible = !(UpgradeMenu.visible)
+
+
+func _on_upgrade_distribution_menu_pressed() -> void:
+	pass # Replace with function body.
