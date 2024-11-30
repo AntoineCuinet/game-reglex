@@ -19,4 +19,6 @@ func _on_menu_button_pressed(extra_arg_0: String) -> void:
 		"Laboratoire":
 			# if on a la thune :  
 			game_manager.set_selected_building(extra_arg_0)
-	pass # Replace with function body.
+		"Serviette":
+			game_manager.set_selected_buiding(extra_arg_0)
+	visible = false

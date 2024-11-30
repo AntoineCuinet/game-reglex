@@ -1747,13 +1747,13 @@ offset_bottom = 276.0
 text = "Shop"
 script = ExtResource("11_lki7h")
 
-[node name="ShopMenu" parent="." instance=ExtResource("11_10unv")]
-offset_left = 290.0
-offset_top = 217.0
-offset_right = 290.0
-offset_bottom = 217.0
-
 [node name="Factory" parent="." instance=ExtResource("14_4iqwu")]
 position = Vector2(-20, 118)
+
+[node name="ShopMenu" parent="." instance=ExtResource("11_10unv")]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 
 [connection signal="pressed" from="MenuButton" to="GameManager" method="_on_shop_button_pressed"]
