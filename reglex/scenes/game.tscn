@@ -1,6 +1,5 @@
 [gd_scene load_steps=35 format=4 uid="uid://chawj3uyw7cmp"]
 
-
 [ext_resource type="Texture2D" uid="uid://ss8ywhox6hkm" path="res://assets/sprites/forest_/forest_ [resources].png" id="2_66cox"]
 [ext_resource type="Texture2D" uid="uid://cimjskam8lux0" path="res://assets/sprites/forest_/forestPath_.png" id="2_iqf05"]
 [ext_resource type="Texture2D" uid="uid://duquu1deabqeo" path="res://assets/sprites/forest_/forest_.png" id="2_kxg1t"]
@@ -1414,13 +1413,13 @@ offset_bottom = 276.0
 text = "Shop"
 script = ExtResource("11_lki7h")
 
-[node name="ShopMenu" parent="." instance=ExtResource("11_10unv")]
-offset_left = 290.0
-offset_top = 217.0
-offset_right = 290.0
-offset_bottom = 217.0
-
 [node name="Factory" parent="." instance=ExtResource("14_4iqwu")]
 position = Vector2(-20, 118)
+
+[node name="ShopMenu" parent="." instance=ExtResource("11_10unv")]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 
 [connection signal="pressed" from="MenuButton" to="GameManager" method="_on_shop_button_pressed"]
