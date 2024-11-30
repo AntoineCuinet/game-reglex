@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://di1m4r131r25p"]
+[gd_scene load_steps=7 format=4 uid="uid://bxqfatnk15vre"]
 
 [ext_resource type="Texture2D" uid="uid://cimjskam8lux0" path="res://assets/sprites/forest_/forestPath_.png" id="1_1jyxt"]
 [ext_resource type="Script" path="res://scripts/shop_menu.gd" id="1_6spfj"]
@@ -152,10 +152,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -57.0
-offset_top = -16.0
-offset_right = -57.0
-offset_bottom = -16.0
+offset_left = 3.0
+offset_top = -2.0
+offset_right = 3.0
+offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6spfj")
@@ -174,8 +174,9 @@ tile_set = SubResource("TileSet_rgdns")
 [node name="MenuBar" type="MenuBar" parent="PopupMenu"]
 offset_left = -252.0
 offset_top = -153.0
-offset_right = 312.0
-offset_bottom = 151.0
+offset_right = -252.0
+offset_bottom = -153.0
+scale = Vector2(2, 2)
 
 [node name="MenuButton1" type="MenuButton" parent="PopupMenu/MenuBar"]
 layout_mode = 0
