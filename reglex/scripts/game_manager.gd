@@ -1,4 +1,4 @@
-extends Node
+extends Area2D
 
 const FactoryType = preload("res://scripts/factory_type.gd")
 
@@ -29,6 +29,12 @@ func add_produits_menstruels(type, amount):
 			
 	print(stocks_menstruel)
 
+func get_cell_coord(coord: Vector2) -> Vector2i:
+	var relative_position: Vector2 = $CityArea.to_local(coord)
+	var tile_size: int = get_parent().get_node("LandscapeTileMap").rendering_quadrant_size
+	print(coord)
+	print(relative_position)
+	return relative_position / tile_size
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -36,7 +42,6 @@ func _ready() -> void:
 	ShopMenu.visible = false
 	UpgradeMenu = get_parent().get_node("UpgradeDistributionMenu")
 	UpgradeMenu.visible = false
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -71,8 +76,12 @@ func _on_shop_button_pressed() -> void:
 	ShopMenu.visible = !ShopMenu.visible
 	if not ShopMenu.visible:
 		selected_building = ""
-	
 
+func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if !event is InputEventMouseButton or !event.pressed:
+		return
+	print(get_cell_coord(event.position))
+	print("========")
 
 func _on_upgrade_pressed() -> void:
 	UpgradeMenu.visible = !(UpgradeMenu.visible)
