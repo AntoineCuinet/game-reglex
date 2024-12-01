@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://bxqfatnk15vre"]
+[gd_scene load_steps=7 format=4 uid="uid://di1m4r131r25p"]
 
 [ext_resource type="Texture2D" uid="uid://cimjskam8lux0" path="res://assets/sprites/forest_/forestPath_.png" id="1_1jyxt"]
 [ext_resource type="Script" path="res://scripts/shop_menu.gd" id="1_6spfj"]
@@ -148,6 +148,7 @@ sources/0 = SubResource("TileSetAtlasSource_uef1h")
 sources/1 = SubResource("TileSetAtlasSource_wtlhm")
 
 [node name="ShopMenu" type="Control"]
+z_index = 10
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -175,19 +176,28 @@ scale = Vector2(2, 2)
 
 [node name="MenuButton1" type="MenuButton" parent="."]
 layout_mode = 0
-offset_left = -200.0
-offset_top = -123.0
-offset_right = 284.0
-offset_bottom = -92.0
-text = "Laboratoire : ??"
+offset_left = -201.0
+offset_top = -30.0
+offset_right = 283.0
+offset_bottom = 1.0
+text = "Laboratoire : 1200"
 
 [node name="BtnUsineServiette" type="MenuButton" parent="."]
 layout_mode = 0
-offset_left = -209.0
-offset_top = -70.0
-offset_right = 281.0
-offset_bottom = -33.0
-text = "Usine de Serviette : ??"
+offset_left = -197.0
+offset_top = -79.0
+offset_right = 293.0
+offset_bottom = -42.0
+text = "Usine de Serviette : 175"
+
+[node name="BtnDistrib" type="MenuButton" parent="."]
+layout_mode = 0
+offset_left = -58.0
+offset_top = 26.0
+offset_right = 159.0
+offset_bottom = 57.0
+text = "Point de distribution : 5000"
 
 [connection signal="pressed" from="MenuButton1" to="." method="_on_menu_button_pressed" binds= ["Laboratoire"]]
 [connection signal="pressed" from="BtnUsineServiette" to="." method="_on_menu_button_pressed" binds= ["Serviette"]]
+[connection signal="pressed" from="BtnDistrib" to="." method="_on_menu_button_pressed" binds= ["Distribution"]]

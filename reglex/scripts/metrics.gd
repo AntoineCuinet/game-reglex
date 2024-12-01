@@ -5,4 +5,7 @@ func update_research_points(research_points):
 	
 
 func update_produits_menstruels(produits_menstruels):
-	$PM.text = str(produits_menstruels) + " 🩸🩹"
+	$PM.text = str(produits_menstruels) + " 🩹"
+
+func update_blood(blood):
+	$Blood.text = str(blood) + " 🩸"
