@@ -36,11 +36,20 @@ func add_blood(amount: int) -> void:
 	blood += amount
 
 func get_cell_coord(coord: Vector2) -> Vector2i:
-	var relative_position: Vector2 = $CityArea.to_local(coord)
+	var zoom: Vector2 = get_parent().get_node("Camera").zoom
+	coord /= zoom
 	var tile_size: int = get_parent().get_node("LandscapeTileMap").rendering_quadrant_size
-	print(coord)
-	print(relative_position)
-	return relative_position / tile_size
+	return (coord / tile_size) - $CityArea.correction
+
+func get_cell_viewport_coord(coord: Vector2i) -> Vector2:
+	var float_coord: Vector2 = coord
+	var zoom: Vector2 = get_parent().get_node("Camera").zoom
+	var tile_size: int = get_parent().get_node("LandscapeTileMap").rendering_quadrant_size
+	var viewport_coord: Vector2 = (float_coord + $CityArea.correction) * tile_size
+	viewport_coord -= get_viewport_rect().size / zoom / 2
+	viewport_coord.x += tile_size / 2
+	viewport_coord.y += tile_size / 2
+	return viewport_coord
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -51,13 +60,6 @@ func _ready() -> void:
 	Metrics = get_parent().get_node("Metrics")
 	Metrics.update_produits_menstruels(0)
 	Metrics.update_research_points(0)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-func _input(event: InputEvent) -> void:
-	pass
 
 #TODO: récuperer le click et appeler cette fonction
 func place_building(click_position: Vector2) -> void:
@@ -89,8 +91,9 @@ func _on_shop_button_pressed() -> void:
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !event is InputEventMouseButton or !event.pressed:
 		return
-	print(get_cell_coord(event.position))
-	print("========")
+	selected_building = "Serviette"
+	var cell: Vector2i = get_cell_coord(event.position)
+	place_building(get_cell_viewport_coord(cell))
 
 func _on_upgrade_pressed() -> void:
 	UpgradeMenu.visible = !(UpgradeMenu.visible)

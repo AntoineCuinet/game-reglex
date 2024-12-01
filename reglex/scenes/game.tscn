@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://chawj3uyw7cmp"]
+[gd_scene load_steps=39 format=4 uid="uid://chawj3uyw7cmp"]
 
 [ext_resource type="Texture2D" uid="uid://ss8ywhox6hkm" path="res://assets/sprites/forest_/forest_ [resources].png" id="2_66cox"]
 [ext_resource type="Texture2D" uid="uid://cimjskam8lux0" path="res://assets/sprites/forest_/forestPath_.png" id="2_iqf05"]
@@ -1129,11 +1129,6 @@ texture = ExtResource("2_66cox")
 2:1/size_in_atlas = Vector2i(1, 2)
 2:1/0 = 0
 7:7/size_in_atlas = Vector2i(1, 2)
-7:7/animation_columns = 4
-7:7/animation_frame_0/duration = 0.1
-7:7/animation_frame_1/duration = 0.1
-7:7/animation_frame_2/duration = 0.1
-7:7/animation_frame_3/duration = 0.1
 7:7/0 = 0
 8:7/0 = 0
 9:7/0 = 0
@@ -1393,9 +1388,15 @@ sources/8 = SubResource("TileSetAtlasSource_lor4a")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d2ssq"]
 size = Vector2(240, 304)
 
+[sub_resource type="GDScript" id="GDScript_sd4oy"]
+script/source = "extends CollisionShape2D
+
+@export var correction: Vector2
+"
+
 [node name="Game" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 
 [node name="LandscapeTileMap" type="TileMapLayer" parent="."]
@@ -1417,6 +1418,8 @@ script = ExtResource("3_toqq0")
 position = Vector2(-272, -56)
 shape = SubResource("RectangleShape2D_d2ssq")
 debug_color = Color(0.282594, 0.499311, 1, 0.42)
+script = SubResource("GDScript_sd4oy")
+correction = Vector2(1, 1)
 
 [node name="MenuButton" type="MenuButton" parent="."]
 offset_left = 330.0
