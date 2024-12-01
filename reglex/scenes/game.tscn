@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://chawj3uyw7cmp"]
+[gd_scene load_steps=38 format=4 uid="uid://chawj3uyw7cmp"]
 
 [ext_resource type="Texture2D" uid="uid://ss8ywhox6hkm" path="res://assets/sprites/forest_/forest_ [resources].png" id="2_66cox"]
 [ext_resource type="Texture2D" uid="uid://cimjskam8lux0" path="res://assets/sprites/forest_/forestPath_.png" id="2_iqf05"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ctar6eydtx8nk" path="res://assets/sprites/forest_/forest_ [bridgeVertical].png" id="6_wph46"]
 [ext_resource type="Texture2D" uid="uid://krr8f3dw5vdp" path="res://assets/sprites/forest_/forest_ [bridgeHorizontal].png" id="7_lbw48"]
 [ext_resource type="Texture2D" uid="uid://drxnba2e8bfqb" path="res://assets/sprites/forest_/forest_ [bridgeAnimatedTiles].png" id="8_vxloj"]
-[ext_resource type="PackedScene" path="res://scenes/fire.tscn" id="10_x8amp"]
+[ext_resource type="PackedScene" uid="uid://du481fievw0kc" path="res://scenes/fire.tscn" id="10_x8amp"]
 [ext_resource type="PackedScene" uid="uid://di1m4r131r25p" path="res://scenes/shop_menu.tscn" id="11_10unv"]
 [ext_resource type="Script" path="res://scripts/shop_menu.gd" id="11_lki7h"]
 [ext_resource type="PackedScene" path="res://scenes/upgrade_distribution_menu.tscn" id="14_qijth"]
@@ -1128,11 +1128,6 @@ texture = ExtResource("2_66cox")
 2:1/size_in_atlas = Vector2i(1, 2)
 2:1/0 = 0
 7:7/size_in_atlas = Vector2i(1, 2)
-7:7/animation_columns = 4
-7:7/animation_frame_0/duration = 0.1
-7:7/animation_frame_1/duration = 0.1
-7:7/animation_frame_2/duration = 0.1
-7:7/animation_frame_3/duration = 0.1
 7:7/0 = 0
 8:7/size_in_atlas = Vector2i(1, 2)
 8:7/0 = 0
