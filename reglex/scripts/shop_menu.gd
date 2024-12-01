@@ -1,9 +1,9 @@
 extends Control
 
 var prices = {
-	"Serviette": 175,
+	"Serviette": 800,
 	"Laboratoire": 1200,
-	"Distribution": 5000
+	"Distribution": 175
 }
 
 func _on_menu_button_pressed(extra_arg_0: String) -> void:

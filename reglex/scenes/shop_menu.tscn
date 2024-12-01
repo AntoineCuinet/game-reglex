@@ -176,27 +176,27 @@ scale = Vector2(2, 2)
 
 [node name="MenuButton1" type="MenuButton" parent="."]
 layout_mode = 0
-offset_left = -201.0
-offset_top = -30.0
-offset_right = 283.0
-offset_bottom = 1.0
+offset_left = -197.0
+offset_top = 43.0
+offset_right = 287.0
+offset_bottom = 74.0
 text = "Laboratoire : 1200"
 
 [node name="BtnUsineServiette" type="MenuButton" parent="."]
 layout_mode = 0
-offset_left = -197.0
-offset_top = -79.0
-offset_right = 293.0
-offset_bottom = -42.0
-text = "Usine de Serviette : 175"
+offset_left = -190.0
+offset_top = -17.0
+offset_right = 300.0
+offset_bottom = 20.0
+text = "Usine de Serviette : 800"
 
 [node name="BtnDistrib" type="MenuButton" parent="."]
 layout_mode = 0
-offset_left = -58.0
-offset_top = 26.0
-offset_right = 159.0
-offset_bottom = 57.0
-text = "Point de distribution : 5000"
+offset_left = -57.0
+offset_top = -73.0
+offset_right = 160.0
+offset_bottom = -42.0
+text = "Point de distribution : 175"
 
 [connection signal="pressed" from="MenuButton1" to="." method="_on_menu_button_pressed" binds= ["Laboratoire"]]
 [connection signal="pressed" from="BtnUsineServiette" to="." method="_on_menu_button_pressed" binds= ["Serviette"]]

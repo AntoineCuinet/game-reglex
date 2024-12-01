@@ -34,6 +34,8 @@ func get_research_points() -> int:
 	
 func remove_research_points(amount) -> void:
 	research_points -= amount
+	if research_points < 0:
+		research_points = 0
 	Metrics.update_research_points(research_points)
 
 func add_produits_menstruels(type, amount):
@@ -46,7 +48,9 @@ func get_produits_menstruels() -> int:
 	return produits_menstruels
 
 func remove_produits_menstruels(amount) -> void:
-	produits_menstruels -= amount 
+	produits_menstruels -= amount
+	if produits_menstruels < 0:
+		produits_menstruels = 0
 	Metrics.update_produits_menstruels(produits_menstruels)
 
 
@@ -60,6 +64,8 @@ func get_blood() -> int:
 	
 func remove_blood(amount) -> void:
 	blood -= amount
+	if blood < 0:
+		blood = 0
 	Metrics.update_blood(blood)
 
 func get_cell_coord(coord: Vector2) -> Vector2i:

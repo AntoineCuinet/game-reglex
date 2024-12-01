@@ -797,7 +797,7 @@ scale = Vector2(20, 20)
 texture = SubResource("CanvasTexture_dgsrg")
 
 [node name="Clock" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 5.0
 one_shot = true
 autostart = true
 

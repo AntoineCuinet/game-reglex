@@ -30,7 +30,7 @@ func _on_pressed() -> void:
 
 func _on_timer_timeout() -> void:
 	if (stock > 0):
-		stock -= 5
-		game_manager.add_blood(25 * game_manager.getPerf())
+		stock -= 1
+		game_manager.add_blood(5 * game_manager.getPerf())
 	elif stock < 0:
 		stock = 0

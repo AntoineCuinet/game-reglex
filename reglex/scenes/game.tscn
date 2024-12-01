@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://di1m4r131r25p" path="res://scenes/shop_menu.tscn" id="11_10unv"]
 [ext_resource type="Script" path="res://scripts/shop_menu.gd" id="11_lki7h"]
 [ext_resource type="Texture2D" uid="uid://crkxytk4h3s4v" path="res://assets/sprites/factory_/dungeonDecoration_0 [blueCarpet].png" id="11_pjje2"]
-[ext_resource type="PackedScene" uid="uid://cc4jdmpixe6so" path="res://scenes/PointDistribution.tscn" id="13_plcfw"]
+[ext_resource type="PackedScene" uid="uid://pdd241mmxoms" path="res://scenes/factory.tscn" id="13_s7tpc"]
 [ext_resource type="PackedScene" uid="uid://badde4gpaeo1l" path="res://scenes/upgrade_distribution_menu.tscn" id="14_qijth"]
 [ext_resource type="PackedScene" uid="uid://cgb7aqx2oy734" path="res://scenes/Metrics.tscn" id="15_2xmwv"]
 
@@ -1436,8 +1436,8 @@ position = Vector2(305.5, 136.5)
 shape = SubResource("RectangleShape2D_2r15j")
 debug_color = Color(0.819608, 0.403922, 0, 0.419608)
 
-[node name="PointDistribution" parent="." instance=ExtResource("13_plcfw")]
-position = Vector2(205, -85)
+[node name="Factory" parent="." instance=ExtResource("13_s7tpc")]
+position = Vector2(-16, 141)
 
 [node name="MenuButton" type="MenuButton" parent="."]
 offset_left = 330.0

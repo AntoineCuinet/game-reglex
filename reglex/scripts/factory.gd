@@ -4,7 +4,7 @@ const FactoryType = preload("res://scripts/factory_type.gd")
 
 var type: FactoryType.Type;
 var is_set_up: bool = false
-var amount_per_harvest: int = 1
+var amount_per_harvest: int = 10
 
 func set_up(t: FactoryType.Type) -> void:
 	is_set_up = true
