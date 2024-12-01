@@ -1451,6 +1451,9 @@ offset_top = -200.0
 offset_right = 350.0
 offset_bottom = -200.0
 
+[node name="PointDistribution" parent="." instance=ExtResource("16_od8yw")]
+position = Vector2(-402, 175)
+
 [connection signal="input_event" from="GameManager" to="GameManager" method="_on_input_event"]
 [connection signal="pressed" from="MenuButton" to="GameManager" method="_on_shop_button_pressed"]
 [connection signal="pressed" from="UpgradeDistributionMenu2" to="GameManager" method="_on_upgrade_pressed"]
