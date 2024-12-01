@@ -20,7 +20,7 @@ var selected_building: String = "";
 
 func add_research_points(points: int) -> void:
 	research_points += points
-	#$UI.update_research_points(research_points)
+	Metrics.update_research_points(research_points)
 	print(research_points)
 
 func add_produits_menstruels(type, amount):
@@ -69,7 +69,7 @@ func place_building(click_position: Vector2) -> void:
 			node.set_up(FactoryType.Type.SERVIETTE)
 		_:
 			return
-	add_child(node)
+	get_parent().add_child(node)
 	# TODO: vérifier que la position est valide
 	node.position = click_position
 	selected_building = ""
@@ -86,7 +86,6 @@ func _on_shop_button_pressed() -> void:
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !event is InputEventMouseButton or !event.pressed:
 		return
-	selected_building = "Serviette"
 	var cell: Vector2i = get_cell_coord(event.position)
 	place_building(get_cell_viewport_coord(cell))
 

@@ -1,17 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyq5nve5wyk8t"]
+[gd_scene load_steps=3 format=3 uid="uid://d3in5jkjlcm01"]
 
 [ext_resource type="Script" path="res://scripts/lab.gd" id="1_a73fr"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_qaxma"]
 
 [node name="Lab" type="Node2D"]
-position = Vector2(4.25, 3.75)
-scale = Vector2(26.823, 24)
+scale = Vector2(16, 16)
 script = ExtResource("1_a73fr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-2.58093, 0.296875)
-scale = Vector2(1, 1.064)
 texture = SubResource("CanvasTexture_qaxma")
 
 [node name="Timer" type="Timer" parent="."]
