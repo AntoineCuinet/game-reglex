@@ -189,5 +189,5 @@ offset_right = 281.0
 offset_bottom = -33.0
 text = "Usine de Serviette : ??"
 
-[connection signal="pressed" from="MenuButton1" to="." method="_on_menu_button_pressed" binds= ["\"Laboratoire\""]]
-[connection signal="pressed" from="BtnUsineServiette" to="." method="_on_menu_button_pressed" binds= ["\"Serviette\""]]
+[connection signal="pressed" from="MenuButton1" to="." method="_on_menu_button_pressed" binds= ["Laboratoire"]]
+[connection signal="pressed" from="BtnUsineServiette" to="." method="_on_menu_button_pressed" binds= ["Serviette"]]
