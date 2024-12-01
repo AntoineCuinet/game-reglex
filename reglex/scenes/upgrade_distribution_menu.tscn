@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://badde4gpaeo1l"]
+[gd_scene load_steps=13 format=4 uid="uid://buaanp03882rb"]
 
 [ext_resource type="Texture2D" uid="uid://cimjskam8lux0" path="res://assets/sprites/forest_/forestPath_.png" id="1_4w3v4"]
 [ext_resource type="Texture2D" uid="uid://duquu1deabqeo" path="res://assets/sprites/forest_/forest_.png" id="2_0x1rx"]
@@ -174,7 +174,6 @@ tile_map_data = PackedByteArray("AAAAAAAAAQAHAAYAAAD//wAAAQAHAAYAAAD+/wAAAQAHAAY
 tile_set = SubResource("TileSet_1q5e8")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="TileMapLayer"]
-anchors_preset = -1
 offset_left = -232.0
 offset_top = -65.0
 offset_right = 299.0
