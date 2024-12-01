@@ -4,6 +4,7 @@ const FactoryType = preload("res://scripts/factory_type.gd")
 
 var LABS = preload("res://scenes/lab.tscn");
 var FACTORIES = preload("res://scenes/factory.tscn");
+var DISTRIBUTIONS = preload("res://scenes/PointDistribution.tscn")
 var ShopMenu = null;
 var UpgradeMenu = null;
 var Metrics = null;
@@ -12,8 +13,8 @@ var Metrics = null;
 var research_points: int = 0
 var satisfaction: int = 0
 var produits_menstruels: int = 0
-var blood: int = 0
-var perf: int = 0
+var blood: int = 250
+var perf: int = 1
 
 var selected_building: String = "";
 
@@ -26,33 +27,39 @@ func getPerf() -> int:
 func add_research_points(points: int) -> void:
 	research_points += points
 	Metrics.update_research_points(research_points)
-	print(research_points)
 
 func get_research_points() -> int:
 	return research_points
 	
 func remove_research_points(amount) -> void:
 	research_points -= amount
+	Metrics.update_research_points(research_points)
 
 func add_produits_menstruels(type, amount):
 	match type:
 		FactoryType.Type.SERVIETTE:
-			produits_menstruels += amount * 1
+			produits_menstruels += amount * 5
+	Metrics.update_produits_menstruels(produits_menstruels)
 
 func get_produits_menstruels() -> int:
 	return produits_menstruels
 
 func remove_produits_menstruels(amount) -> void:
 	produits_menstruels -= amount 
+	Metrics.update_produits_menstruels(produits_menstruels)
+
 
 func add_blood(amount: int) -> void:
 	blood += amount
+	Metrics.update_blood(blood)
+
 
 func get_blood() -> int:
 	return blood
 	
 func remove_blood(amount) -> void:
 	blood -= amount
+	Metrics.update_blood(blood)
 
 func get_cell_coord(coord: Vector2) -> Vector2i:
 	var zoom: Vector2 = get_parent().get_node("Camera").zoom
@@ -79,6 +86,7 @@ func _ready() -> void:
 	Metrics = get_parent().get_node("Metrics")
 	Metrics.update_produits_menstruels(0)
 	Metrics.update_research_points(0)
+	Metrics.update_blood(blood)
 
 #TODO: récuperer le click et appeler cette fonction
 func place_building(click_position: Vector2) -> void:
@@ -87,11 +95,12 @@ func place_building(click_position: Vector2) -> void:
 	var node = null
 	match selected_building:
 		"Laboratoire":
-			print("PASS")
 			node = LABS.instantiate()
 		"Serviette":
 			node = FACTORIES.instantiate()
 			node.set_up(FactoryType.Type.SERVIETTE)
+		"Distribution":
+			node = DISTRIBUTIONS.instantiate()
 		_:
 			return
 	get_parent().add_child(node)

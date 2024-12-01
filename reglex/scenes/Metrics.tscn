@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpue31ls74q5q"]
+[gd_scene load_steps=2 format=3 uid="uid://cgb7aqx2oy734"]
 
 [ext_resource type="Script" path="res://scripts/metrics.gd" id="1_tnbei"]
 
@@ -13,15 +13,28 @@ script = ExtResource("1_tnbei")
 
 [node name="PR" type="Label" parent="."]
 layout_mode = 0
+offset_left = -34.0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "PR
 "
+horizontal_alignment = 2
 
 [node name="PM" type="Label" parent="."]
 layout_mode = 0
+offset_left = -34.0
 offset_top = 22.0
 offset_right = 40.0
 offset_bottom = 45.0
 text = "PM
 "
+horizontal_alignment = 2
+
+[node name="Blood" type="Label" parent="."]
+layout_mode = 0
+offset_left = -32.0
+offset_top = 44.0
+offset_right = 40.0
+offset_bottom = 67.0
+text = "B"
+horizontal_alignment = 2

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3in5jkjlcm01"]
+[gd_scene load_steps=7 format=3 uid="uid://dyq5nve5wyk8t"]
 
 [ext_resource type="Script" path="res://scripts/lab.gd" id="1_a73fr"]
 [ext_resource type="Texture2D" uid="uid://dx685igti3xgl" path="res://assets/sprites/factory_/furnace_.png" id="2_61y5k"]

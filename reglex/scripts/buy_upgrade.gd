@@ -12,7 +12,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var my_label = $TileMapLayer/Prix
 	my_label.text = "Prix : " + str(prices[index]) + " point de recherche"
-	print(index);
+
 
 
 func _on_upgrade_pressed() -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://duiit0iaduhtp"]
+[gd_scene load_steps=12 format=3 uid="uid://pdd241mmxoms"]
 
 [ext_resource type="Script" path="res://scripts/factory.gd" id="1_btc57"]
 [ext_resource type="Texture2D" uid="uid://br7ambcnlfusg" path="res://assets/sprites/factory_/Market_Objects.png" id="2_t2wws"]

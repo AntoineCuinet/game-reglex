@@ -157,6 +157,7 @@ sources/1 = SubResource("TileSetAtlasSource_ax0y0")
 [sub_resource type="Theme" id="Theme_dbjjw"]
 
 [node name="UpgradeDistributionMenu" type="Control"]
+z_index = 6
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

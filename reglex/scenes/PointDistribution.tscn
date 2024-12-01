@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b775si5avgvtd"]
+[gd_scene load_steps=5 format=3 uid="uid://cc4jdmpixe6so"]
 
 [ext_resource type="Texture2D" uid="uid://br7ambcnlfusg" path="res://assets/sprites/factory_/Market_Objects.png" id="2_h5cl8"]
 [ext_resource type="Script" path="res://scripts/texture_button.gd" id="2_wauvo"]
@@ -691,15 +691,17 @@ sources/0 = SubResource("TileSetAtlasSource_5kr4b")
 [node name="PointDistribution" type="Node2D"]
 
 [node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 2.0
-offset_top = 3.0
-offset_right = 57.0
-offset_bottom = 52.0
+offset_right = 55.0
+offset_bottom = 39.0
 script = ExtResource("2_wauvo")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(-9, -9)
 scale = Vector2(1.2, 1.2)
 tile_map_data = PackedByteArray(0, 0, 1, 0, 1, 0, 0, 0, 6, 0, 10, 0, 0, 0)
 tile_set = SubResource("TileSet_p386b")
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
+[connection signal="timeout" from="Timer" to="TextureButton" method="_on_timer_timeout"]
