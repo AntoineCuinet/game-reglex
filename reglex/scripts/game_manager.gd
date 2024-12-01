@@ -13,13 +13,26 @@ var research_points: int = 0
 var satisfaction: int = 0
 var produits_menstruels: int = 0
 var blood: int = 0
+var perf: int = 0
 
 var selected_building: String = "";
+
+func updatePerf(amount: float) -> void:
+	perf += amount;
+
+func getPerf() -> int:
+	return perf
 
 func add_research_points(points: int) -> void:
 	research_points += points
 	#$UI.update_research_points(research_points)
 	print(research_points)
+
+func get_research_points() -> int:
+	return research_points
+	
+func remove_research_points(amount) -> void:
+	research_points -= amount
 
 func add_produits_menstruels(type, amount):
 	match type:
@@ -34,6 +47,12 @@ func remove_produits_menstruels(amount) -> void:
 
 func add_blood(amount: int) -> void:
 	blood += amount
+
+func get_blood() -> int:
+	return blood
+	
+func remove_blood(amount) -> void:
+	blood -= amount
 
 func get_cell_coord(coord: Vector2) -> Vector2i:
 	var zoom: Vector2 = get_parent().get_node("Camera").zoom

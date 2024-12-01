@@ -2,22 +2,23 @@ extends TextureButton
 
 const MAX_STOCK = 64;
 var stock : int;
-var perf = 1;
+var game_manager = null;
 
 
-func updatePerf(amount: float) -> void:
-	perf += amount;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	game_manager = get_parent().get_parent().get_node("GameManager");
 	stock = 0;
+
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if (stock > 0):
-		stock -= 5 * perf
-		get_parent().get_parent().get_node("GameManager").add_blood(5 * perf)
+		stock -= 5 * game_manager.getPerf()
+		game_manager.add_blood(5 * game_manager.getPerf())
 	elif stock < 0:
 		stock = 0
 

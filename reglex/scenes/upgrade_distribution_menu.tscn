@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=4 uid="uid://badde4gpaeo1l"]
+[gd_scene load_steps=14 format=4 uid="uid://badde4gpaeo1l"]
 
 [ext_resource type="Texture2D" uid="uid://cimjskam8lux0" path="res://assets/sprites/forest_/forestPath_.png" id="1_4w3v4"]
+[ext_resource type="Script" path="res://scripts/buy_upgrade.gd" id="1_j850x"]
 [ext_resource type="Texture2D" uid="uid://duquu1deabqeo" path="res://assets/sprites/forest_/forest_.png" id="2_0x1rx"]
 [ext_resource type="Texture2D" uid="uid://ddxioah514ql0" path="res://assets/sprites/GUI/beige.jpeg" id="3_nh6xk"]
 [ext_resource type="Texture2D" uid="uid://btvw4ywrgmpuo" path="res://assets/sprites/GUI/red_gem.png" id="4_atse2"]
@@ -166,6 +167,7 @@ offset_right = 434.0
 offset_bottom = 84.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_j850x")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 self_modulate = Color(0.714658, 0.605442, 0.445804, 1)
@@ -624,3 +626,22 @@ offset_top = 15.0
 offset_right = 32.0
 offset_bottom = 55.0
 texture = ExtResource("5_0lj38")
+
+[node name="Prix" type="Label" parent="TileMapLayer"]
+offset_left = 4.0
+offset_top = -142.0
+offset_right = 126.0
+offset_bottom = -87.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect/Upgrade" to="." method="_on_upgrade_pressed"]
+[connection signal="pressed" from="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect2/Upgrade" to="." method="_on_upgrade_pressed"]
+[connection signal="pressed" from="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect3/Upgrade" to="." method="_on_upgrade_pressed"]
+[connection signal="pressed" from="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect4/Upgrade" to="." method="_on_upgrade_pressed"]
+[connection signal="pressed" from="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect5/Upgrade" to="." method="_on_upgrade_pressed"]
+[connection signal="button_up" from="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect6/Upgrade" to="." method="_on_upgrade_button_up"]
+[connection signal="pressed" from="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect6/Upgrade" to="." method="_on_upgrade_pressed"]
+[connection signal="pressed" from="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect7/Upgrade" to="." method="_on_upgrade_pressed"]
+[connection signal="pressed" from="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect8/Upgrade" to="." method="_on_upgrade_pressed"]
+[connection signal="pressed" from="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect9/Upgrade" to="." method="_on_upgrade_pressed"]
