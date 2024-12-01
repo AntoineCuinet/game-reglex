@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://chawj3uyw7cmp"]
+[gd_scene load_steps=44 format=4 uid="uid://chawj3uyw7cmp"]
 
 [ext_resource type="Texture2D" uid="uid://ss8ywhox6hkm" path="res://assets/sprites/forest_/forest_ [resources].png" id="2_66cox"]
 [ext_resource type="Texture2D" uid="uid://cimjskam8lux0" path="res://assets/sprites/forest_/forestPath_.png" id="2_iqf05"]
@@ -14,8 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://bxqfatnk15vre" path="res://scenes/shop_menu.tscn" id="11_10unv"]
 [ext_resource type="Script" path="res://scripts/shop_menu.gd" id="11_lki7h"]
 [ext_resource type="Texture2D" uid="uid://crkxytk4h3s4v" path="res://assets/sprites/factory_/dungeonDecoration_0 [blueCarpet].png" id="11_pjje2"]
-[ext_resource type="PackedScene" uid="uid://buaanp03882rb" path="res://scenes/upgrade_distribution_menu.tscn" id="14_qijth"]
-[ext_resource type="PackedScene" uid="uid://dpue31ls74q5q" path="res://scenes/Metrics.tscn" id="15_2xmwv"]
+[ext_resource type="PackedScene" uid="uid://badde4gpaeo1l" path="res://scenes/upgrade_distribution_menu.tscn" id="14_qijth"]
+[ext_resource type="PackedScene" uid="uid://cgb7aqx2oy734" path="res://scenes/Metrics.tscn" id="15_2xmwv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q7o6i"]
 texture = ExtResource("2_kxg1t")
@@ -1381,11 +1381,17 @@ sources/10 = SubResource("TileSetAtlasSource_7o76o")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d2ssq"]
 size = Vector2(240, 304)
 
-[sub_resource type="GDScript" id="GDScript_sd4oy"]
-script/source = "extends CollisionShape2D
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lpqh1"]
+size = Vector2(240, 250)
 
-@export var correction: Vector2
-"
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qb8kx"]
+size = Vector2(279, 308)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g44i5"]
+size = Vector2(347, 92)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2r15j"]
+size = Vector2(171, 141)
 
 [node name="Game" type="Node2D"]
 
@@ -1404,14 +1410,33 @@ tile_set = SubResource("TileSet_g5ukg")
 [node name="GameManager" type="Area2D" parent="."]
 script = ExtResource("3_toqq0")
 
-[node name="CityArea" type="CollisionShape2D" parent="GameManager"]
+[node name="BorderlandArea" type="CollisionShape2D" parent="GameManager"]
 position = Vector2(-272, -56)
 shape = SubResource("RectangleShape2D_d2ssq")
-debug_color = Color(0.282594, 0.499311, 1, 0.42)
-script = SubResource("GDScript_sd4oy")
-correction = Vector2(1, 1)
+debug_color = Color(0, 0.650759, 0.0696603, 0.42)
+
+[node name="CityArea" type="CollisionShape2D" parent="GameManager"]
+position = Vector2(272, -82)
+shape = SubResource("RectangleShape2D_lpqh1")
+debug_color = Color(0.355923, 0.481796, 1, 0.42)
+
+[node name="FieldsArea1" type="CollisionShape2D" parent="GameManager"]
+position = Vector2(-0.5, -53)
+shape = SubResource("RectangleShape2D_qb8kx")
+debug_color = Color(0.819707, 0.403272, 0, 0.42)
+
+[node name="FieldsArea2" type="CollisionShape2D" parent="GameManager"]
+position = Vector2(-217.5, 161)
+shape = SubResource("RectangleShape2D_g44i5")
+debug_color = Color(0.819608, 0.403922, 0, 0.419608)
+
+[node name="FieldsArea3" type="CollisionShape2D" parent="GameManager"]
+position = Vector2(305.5, 136.5)
+shape = SubResource("RectangleShape2D_2r15j")
+debug_color = Color(0.819608, 0.403922, 0, 0.419608)
 
 [node name="MenuButton" type="MenuButton" parent="."]
+visible = false
 offset_left = 330.0
 offset_top = 170.0
 offset_right = 399.0
@@ -1420,18 +1445,21 @@ text = "Shop"
 script = ExtResource("11_lki7h")
 
 [node name="ShopMenu" parent="." instance=ExtResource("11_10unv")]
+visible = false
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
 offset_bottom = 0.0
 
 [node name="UpgradeDistributionMenu" parent="." instance=ExtResource("14_qijth")]
+visible = false
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
 offset_bottom = 0.0
 
 [node name="UpgradeDistributionMenu2" type="MenuButton" parent="."]
+visible = false
 offset_left = 247.0
 offset_top = 176.0
 offset_right = 322.0
@@ -1439,6 +1467,7 @@ offset_bottom = 207.0
 text = "Upgrade"
 
 [node name="Metrics" parent="." instance=ExtResource("15_2xmwv")]
+visible = false
 offset_left = 350.0
 offset_top = -200.0
 offset_right = 350.0

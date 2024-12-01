@@ -4,6 +4,7 @@ const FactoryType = preload("res://scripts/factory_type.gd")
 
 var LABS = preload("res://scenes/lab.tscn");
 var FACTORIES = preload("res://scenes/factory.tscn");
+var CORRECTION: Vector2 = Vector2(1, 1)
 var ShopMenu = null;
 var UpgradeMenu = null;
 var Metrics = null;
@@ -58,13 +59,13 @@ func get_cell_coord(coord: Vector2) -> Vector2i:
 	var zoom: Vector2 = get_parent().get_node("Camera").zoom
 	coord /= zoom
 	var tile_size: int = get_parent().get_node("LandscapeTileMap").rendering_quadrant_size
-	return (coord / tile_size) - $CityArea.correction
+	return (coord / tile_size) - CORRECTION
 
 func get_cell_viewport_coord(coord: Vector2i) -> Vector2:
 	var float_coord: Vector2 = coord
 	var zoom: Vector2 = get_parent().get_node("Camera").zoom
 	var tile_size: int = get_parent().get_node("LandscapeTileMap").rendering_quadrant_size
-	var viewport_coord: Vector2 = (float_coord + $CityArea.correction) * tile_size
+	var viewport_coord: Vector2 = (float_coord + CORRECTION) * tile_size
 	viewport_coord -= get_viewport_rect().size / zoom / 2
 	viewport_coord.x += tile_size / 2
 	viewport_coord.y += tile_size / 2
@@ -111,6 +112,18 @@ func _on_shop_button_pressed() -> void:
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !event is InputEventMouseButton or !event.pressed:
 		return
+	match selected_building:
+		"Laboratoire":
+			if shape_idx != 1:
+				return
+		"Serviette":
+			if shape_idx < 2:
+				return
+		"Distribution":
+			if shape_idx > 1:
+				return
+		_:
+			return
 	var cell: Vector2i = get_cell_coord(event.position)
 	place_building(get_cell_viewport_coord(cell))
 
