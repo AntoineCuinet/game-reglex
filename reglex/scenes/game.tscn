@@ -14,8 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://bxqfatnk15vre" path="res://scenes/shop_menu.tscn" id="11_10unv"]
 [ext_resource type="Script" path="res://scripts/shop_menu.gd" id="11_lki7h"]
 [ext_resource type="Texture2D" uid="uid://crkxytk4h3s4v" path="res://assets/sprites/factory_/dungeonDecoration_0 [blueCarpet].png" id="11_pjje2"]
-[ext_resource type="PackedScene" path="res://scenes/upgrade_distribution_menu.tscn" id="14_qijth"]
-[ext_resource type="PackedScene" uid="uid://cgb7aqx2oy734" path="res://scenes/Metrics.tscn" id="15_2xmwv"]
+[ext_resource type="PackedScene" uid="uid://buaanp03882rb" path="res://scenes/upgrade_distribution_menu.tscn" id="14_qijth"]
+[ext_resource type="PackedScene" uid="uid://dpue31ls74q5q" path="res://scenes/Metrics.tscn" id="15_2xmwv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q7o6i"]
 texture = ExtResource("2_kxg1t")

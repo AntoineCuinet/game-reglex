@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3in5jkjlcm01"]
+[gd_scene load_steps=7 format=3 uid="uid://d3in5jkjlcm01"]
 
 [ext_resource type="Script" path="res://scripts/lab.gd" id="1_a73fr"]
 [ext_resource type="Texture2D" uid="uid://dx685igti3xgl" path="res://assets/sprites/factory_/furnace_.png" id="2_61y5k"]
@@ -482,22 +482,15 @@ texture = ExtResource("3_8k24p")
 sources/0 = SubResource("TileSetAtlasSource_1ntmc")
 sources/1 = SubResource("TileSetAtlasSource_at7dw")
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_qaxma"]
-
 [node name="Lab" type="Node2D"]
 scale = Vector2(16, 16)
 script = ExtResource("1_a73fr")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(0, -2.98023e-08)
-tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 1, 0, 30, 0, 7, 0, 0, 0)
+scale = Vector2(0.05, 0.05)
+tile_map_data = PackedByteArray(0, 0, 255, 255, 0, 0, 1, 0, 30, 0, 7, 0, 0, 0)
 tile_set = SubResource("TileSet_y7s56")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(-2.58093, 0.296875)
-scale = Vector2(1, 1.064)
-texture = SubResource("CanvasTexture_qaxma")
 
 [node name="Timer" type="Timer" parent="."]
 
