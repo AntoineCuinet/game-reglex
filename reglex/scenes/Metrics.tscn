@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cgb7aqx2oy734"]
+[gd_scene load_steps=5 format=3 uid="uid://cgb7aqx2oy734"]
 
 [ext_resource type="Script" path="res://scripts/metrics.gd" id="1_tnbei"]
+[ext_resource type="Texture2D" uid="uid://cllyhkx3403mb" path="res://assets/emoji/blood.png" id="2_885uw"]
+[ext_resource type="Texture2D" uid="uid://c8wpl6mxjlr0g" path="res://assets/emoji/pad.png" id="3_lmrfk"]
+[ext_resource type="Texture2D" uid="uid://dn2wjv2j1ufl4" path="res://assets/emoji/lab.png" id="4_ot2gx"]
 
 [node name="Metrics" type="Control"]
 layout_mode = 3
@@ -13,8 +16,8 @@ script = ExtResource("1_tnbei")
 
 [node name="PR" type="Label" parent="."]
 layout_mode = 0
-offset_left = -34.0
-offset_right = 40.0
+offset_left = -56.0
+offset_right = 18.0
 offset_bottom = 23.0
 text = "PR
 "
@@ -22,9 +25,9 @@ horizontal_alignment = 2
 
 [node name="PM" type="Label" parent="."]
 layout_mode = 0
-offset_left = -34.0
+offset_left = -56.0
 offset_top = 22.0
-offset_right = 40.0
+offset_right = 18.0
 offset_bottom = 45.0
 text = "PM
 "
@@ -32,9 +35,24 @@ horizontal_alignment = 2
 
 [node name="Blood" type="Label" parent="."]
 layout_mode = 0
-offset_left = -32.0
+offset_left = -54.0
 offset_top = 44.0
-offset_right = 40.0
+offset_right = 18.0
 offset_bottom = 67.0
 text = "B"
 horizontal_alignment = 2
+
+[node name="Blood2" type="Sprite2D" parent="."]
+position = Vector2(33, 56)
+scale = Vector2(0.520833, 0.489583)
+texture = ExtResource("2_885uw")
+
+[node name="Pad" type="Sprite2D" parent="."]
+position = Vector2(33, 33.7656)
+scale = Vector2(0.460938, 0.336426)
+texture = ExtResource("3_lmrfk")
+
+[node name="Lab" type="Sprite2D" parent="."]
+position = Vector2(33, 12)
+scale = Vector2(0.4375, 0.489583)
+texture = ExtResource("4_ot2gx")
