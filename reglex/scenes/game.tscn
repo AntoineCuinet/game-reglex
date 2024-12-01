@@ -11,12 +11,12 @@
 [ext_resource type="Texture2D" uid="uid://krr8f3dw5vdp" path="res://assets/sprites/forest_/forest_ [bridgeHorizontal].png" id="7_lbw48"]
 [ext_resource type="Texture2D" uid="uid://drxnba2e8bfqb" path="res://assets/sprites/forest_/forest_ [bridgeAnimatedTiles].png" id="8_vxloj"]
 [ext_resource type="Texture2D" uid="uid://bt2iorjgh73ki" path="res://assets/sprites/factory_/railway_.png" id="10_aimvr"]
-[ext_resource type="PackedScene" uid="uid://di1m4r131r25p" path="res://scenes/shop_menu.tscn" id="11_10unv"]
+[ext_resource type="PackedScene" uid="uid://bxqfatnk15vre" path="res://scenes/shop_menu.tscn" id="11_10unv"]
 [ext_resource type="Script" path="res://scripts/shop_menu.gd" id="11_lki7h"]
 [ext_resource type="Texture2D" uid="uid://crkxytk4h3s4v" path="res://assets/sprites/factory_/dungeonDecoration_0 [blueCarpet].png" id="11_pjje2"]
-[ext_resource type="PackedScene" uid="uid://cc4jdmpixe6so" path="res://scenes/PointDistribution.tscn" id="13_plcfw"]
+[ext_resource type="PackedScene" uid="uid://y4iclqugogpf" path="res://scenes/PointDistribution.tscn" id="13_plcfw"]
 [ext_resource type="PackedScene" uid="uid://badde4gpaeo1l" path="res://scenes/upgrade_distribution_menu.tscn" id="14_qijth"]
-[ext_resource type="PackedScene" uid="uid://cgb7aqx2oy734" path="res://scenes/Metrics.tscn" id="15_2xmwv"]
+[ext_resource type="PackedScene" uid="uid://cs4mrxjl8cqa8" path="res://scenes/Metrics.tscn" id="15_2xmwv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q7o6i"]
 texture = ExtResource("2_kxg1t")
