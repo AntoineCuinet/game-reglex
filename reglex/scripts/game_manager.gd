@@ -11,10 +11,8 @@ var Metrics = null;
 #instantiate all metrics
 var research_points: int = 0
 var satisfaction: int = 0
-var stocks_menstruel = {
-	FactoryType.Type.SERVIETTE: 0,
-}
-var somme_PM = 0
+var produits_menstruels: int = 0
+var blood: int = 0
 
 var selected_building: String = "";
 
@@ -24,11 +22,18 @@ func add_research_points(points: int) -> void:
 	print(research_points)
 
 func add_produits_menstruels(type, amount):
-	stocks_menstruel[type] += amount
 	match type:
 		FactoryType.Type.SERVIETTE:
-			somme_PM += amount
-	Metrics.update_produits_menstruels(somme_PM)
+			produits_menstruels += amount * 1
+
+func get_produits_menstruels() -> int:
+	return produits_menstruels
+
+func remove_produits_menstruels(amount) -> void:
+	produits_menstruels -= amount 
+
+func add_blood(amount: int) -> void:
+	blood += amount
 
 func get_cell_coord(coord: Vector2) -> Vector2i:
 	var zoom: Vector2 = get_parent().get_node("Camera").zoom
@@ -63,6 +68,7 @@ func place_building(click_position: Vector2) -> void:
 	var node = null
 	match selected_building:
 		"Laboratoire":
+			print("PASS")
 			node = LABS.instantiate()
 		"Serviette":
 			node = FACTORIES.instantiate()

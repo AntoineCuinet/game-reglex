@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://di1m4r131r25p"]
+[gd_scene load_steps=7 format=4 uid="uid://bxqfatnk15vre"]
 
 [ext_resource type="Texture2D" uid="uid://cimjskam8lux0" path="res://assets/sprites/forest_/forestPath_.png" id="1_1jyxt"]
 [ext_resource type="Script" path="res://scripts/shop_menu.gd" id="1_6spfj"]
@@ -189,5 +189,5 @@ offset_right = 281.0
 offset_bottom = -33.0
 text = "Usine de Serviette : ??"
 
-[connection signal="pressed" from="MenuButton1" to="." method="_on_menu_button_pressed" binds= ["\"Laboratoire\""]]
-[connection signal="pressed" from="BtnUsineServiette" to="." method="_on_menu_button_pressed" binds= ["\"Serviette\""]]
+[connection signal="pressed" from="MenuButton1" to="." method="_on_menu_button_pressed" binds= ["Laboratoire"]]
+[connection signal="pressed" from="BtnUsineServiette" to="." method="_on_menu_button_pressed" binds= ["Serviette"]]
