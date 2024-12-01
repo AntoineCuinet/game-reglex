@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://chawj3uyw7cmp"]
+[gd_scene load_steps=37 format=4 uid="uid://chawj3uyw7cmp"]
 
 [ext_resource type="Texture2D" uid="uid://ss8ywhox6hkm" path="res://assets/sprites/forest_/forest_ [resources].png" id="2_66cox"]
 [ext_resource type="Texture2D" uid="uid://cimjskam8lux0" path="res://assets/sprites/forest_/forestPath_.png" id="2_iqf05"]
@@ -1389,9 +1389,15 @@ sources/8 = SubResource("TileSetAtlasSource_lor4a")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d2ssq"]
 size = Vector2(240, 304)
 
+[sub_resource type="GDScript" id="GDScript_sd4oy"]
+script/source = "extends CollisionShape2D
+
+@export var correction: Vector2
+"
+
 [node name="Game" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 
 [node name="LandscapeTileMap" type="TileMapLayer" parent="."]
@@ -1413,6 +1419,8 @@ script = ExtResource("3_toqq0")
 position = Vector2(-272, -56)
 shape = SubResource("RectangleShape2D_d2ssq")
 debug_color = Color(0.282594, 0.499311, 1, 0.42)
+script = SubResource("GDScript_sd4oy")
+correction = Vector2(1, 1)
 
 [node name="MenuButton" type="MenuButton" parent="."]
 offset_left = 330.0
