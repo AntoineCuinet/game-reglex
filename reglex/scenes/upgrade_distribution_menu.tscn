@@ -230,6 +230,14 @@ offset_top = 20.0
 offset_right = 497.0
 offset_bottom = 77.0
 
+[node name="Label" type="Label" parent="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect/Upgrade"]
+layout_mode = 0
+offset_right = 78.0
+offset_bottom = 57.0
+text = "BUY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="TextureRect" type="TextureRect" parent="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect"]
 layout_mode = 0
 offset_left = -8.0
@@ -277,6 +285,13 @@ offset_left = 418.0
 offset_top = 20.0
 offset_right = 497.0
 offset_bottom = 77.0
+
+[node name="Label" type="Label" parent="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect2/Upgrade"]
+offset_right = 80.0
+offset_bottom = 57.0
+text = "BUY"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect2"]
 layout_mode = 0
@@ -327,6 +342,13 @@ offset_top = 20.0
 offset_right = 497.0
 offset_bottom = 77.0
 
+[node name="Label" type="Label" parent="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect3/Upgrade"]
+offset_right = 80.0
+offset_bottom = 57.0
+text = "BUY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="TextureRect" type="TextureRect" parent="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect3"]
 layout_mode = 0
 offset_left = -8.0
@@ -376,6 +398,13 @@ offset_top = 20.0
 offset_right = 497.0
 offset_bottom = 77.0
 
+[node name="Label" type="Label" parent="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect4/Upgrade"]
+offset_right = 80.0
+offset_bottom = 57.0
+text = "BUY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="TextureRect" type="TextureRect" parent="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect4"]
 layout_mode = 0
 offset_left = -8.0
@@ -423,6 +452,13 @@ offset_left = 418.0
 offset_top = 20.0
 offset_right = 497.0
 offset_bottom = 77.0
+
+[node name="Label" type="Label" parent="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect5/Upgrade"]
+offset_right = 80.0
+offset_bottom = 57.0
+text = "BUY"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect5"]
 layout_mode = 0
@@ -473,6 +509,13 @@ offset_top = 20.0
 offset_right = 497.0
 offset_bottom = 77.0
 
+[node name="Label" type="Label" parent="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect6/Upgrade"]
+offset_right = 80.0
+offset_bottom = 57.0
+text = "BUY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="TextureRect" type="TextureRect" parent="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect6"]
 layout_mode = 0
 offset_left = -8.0
@@ -521,6 +564,13 @@ offset_left = 418.0
 offset_top = 20.0
 offset_right = 497.0
 offset_bottom = 77.0
+
+[node name="Label" type="Label" parent="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect7/Upgrade"]
+offset_right = 80.0
+offset_bottom = 57.0
+text = "BUY"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect7"]
 layout_mode = 0
@@ -571,6 +621,13 @@ offset_top = 20.0
 offset_right = 497.0
 offset_bottom = 77.0
 
+[node name="Label" type="Label" parent="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect8/Upgrade"]
+offset_right = 80.0
+offset_bottom = 57.0
+text = "BUY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="TextureRect" type="TextureRect" parent="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect8"]
 layout_mode = 0
 offset_left = -8.0
@@ -619,6 +676,13 @@ offset_left = 418.0
 offset_top = 20.0
 offset_right = 497.0
 offset_bottom = 77.0
+
+[node name="Label" type="Label" parent="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect9/Upgrade"]
+offset_right = 80.0
+offset_bottom = 57.0
+text = "BUY"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="TileMapLayer/ScrollContainer/VBoxContainer/TextureRect9"]
 layout_mode = 0
